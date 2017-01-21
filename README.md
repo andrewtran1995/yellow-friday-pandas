@@ -1,5 +1,6 @@
 # Yellow Friday Pandas
 ## Getting Started
+0. Have WebStorm, [Node.JS](https://nodejs.org/en/download/)
 1. Open WebStorm, and ```git clone``` this project.
 2. In the root directory of this project, run the node package manager to install any dependencies listed in the ```package.json```.
 ```
@@ -60,10 +61,7 @@ npm run dev
 ###React
 * React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
 
-####Dependencies
-* [NPM/Node](https://nodejs.org/en/download/)
-
-####Components
+####Concepts
 * [Components](https://facebook.github.io/react/docs/react-component.html)
 	* Components are independent, reusable pieces in the DOM (Document Object Model)
 	* Mounting
