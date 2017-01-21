@@ -62,9 +62,6 @@ img {
 
 
 
-
-
-
 header {
 	position: absolute;
 	width: 500px;
@@ -82,4 +79,12 @@ header h1 {
 	font-weight: 100;
 	margin: 0;
 	padding: 0;
+}
+
+.uk-section{
+	background-color: white;
+}
+
+.btngroup {
+	margin: auto;
 }
