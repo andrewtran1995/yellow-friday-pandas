@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="index.css">
-		<link rel="stylesheet" href="uikit/dist/css/uikit.css">
+		<!--<link rel="stylesheet" href="uikit/dist/css/uikit.css">-->
+		<script language="javascript" type="text/javascript" src="p5/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="p5/p5.sound.js"></script>
+		<script language="javascript" type="text/javascript" src="music.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -12,6 +15,15 @@
 				<h1>Electron boilerplate</h1>
 			</header>
 			<section class="main"></section>
+			<div class="btnGroup">
+				<table>
+					<tr>
+						<th class="musicBtn"><button id="playBtn" onclick="playPressed()">Play</button></th>
+						<th class="musicBtn"><button id="stopBtn" onclick="stopPressed()">Stop</button></th>
+						<th class="musicBtn"><button id="pauseBtn" onclick="pausePressed()">Pause</button></th>
+					</tr>
+				</table>
+			</div>
 			<footer></footer>
 		</div>
 	</body>
