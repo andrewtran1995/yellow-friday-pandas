@@ -1,5 +1,7 @@
 # Yellow Friday Pandas
 ## Getting Started
+Boilerplate: https://github.com/sindresorhus/electron-boilerplate
+
 0. Have WebStorm, [Node.JS](https://nodejs.org/en/download/)
 1. Open WebStorm, and ```git clone``` this project.
 2. In the root directory of this project, run the node package manager to install any dependencies listed in the ```package.json```.
@@ -53,8 +55,6 @@ npm run dev
         * main.js creates windows and handle system events
     * index.js is the web page to be showed
 * keep a global reference of window obj, otherwise window will be closed when js garbage collected
-
-
 
 
 ## Reference
