@@ -11,7 +11,7 @@ fileInputElement.addEventListener('change', function(){
 
 function setup(audioFilePath) {
 	song = loadSound(audioFilePath);
-	visualization = CanvasVisualization(song);
+	visualization = new CanvasVisualization(song);
 	visualization.onRender();
 }
 

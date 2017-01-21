@@ -1,12 +1,12 @@
 // Create mixin as common interface for visualizations
-var visualizationMixin = Base => class extends Base {
-	onRender() { }
-	onPlay() { }
-	onPause() { }
-	onStop() { }
-}
+// var visualizationMixin = Base => class extends Base {
+// 	onRender() { }
+// 	onPlay() { }
+// 	onPause() { }
+// 	onStop() { }
+// }
 
-class CanvasVisualization extends visualizationMixin(Base) {
+class CanvasVisualization {
 	constructor(song) {
 		this.song = song;
 	}
