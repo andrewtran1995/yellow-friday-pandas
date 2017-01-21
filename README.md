@@ -55,52 +55,7 @@ npm run dev
 * keep a global reference of window obj, otherwise window will be closed when js garbage collected
 
 
-#### Electron-React-Boilerplate
-* [GitHub Repo of Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 
-###React
-* React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
-
-####Concepts
-* [Components](https://facebook.github.io/react/docs/react-component.html)
-	* Components are independent, reusable pieces in the DOM (Document Object Model)
-	* Mounting
-	   * Methods that are called when component is created and inserted into DOM:
-		  * constructor()
-		  * componentWillMount()
-		  * render()
-		  * componentDidMount()
-	* Updating
-	   * Methods called when component is re-rendered:
-		  * componentWillRecieveProps()
-		  * shouldComponentUpdate()
-		  * componentWillUpdate()
-		  * render()
-		  * componentDidUpdate()
-	* Unmounting
-	   * Method called when component is removed from DOM:
-		  * componentWillUnmount()
-* [Containers](https://medium.com/@learnreact/container-components-c0e67432e005#.gqel9v3ha)
-    * Responsible for fetching data and rendering a corresponding sub-component
-
-* **Props** (properties) are parameters given to a component.
-
-* **Render** returns a *react element* using JSX (thing that translates code to be readable).
-
-####Redux
-* [**Reducer**](http://redux.js.org/docs/basics/Reducers.html)
-   * Given a (previous) state and action, returns the next state
-   * Should be "pure" -- "Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation."
-
-####Libraries
-* [Redux](http://redux.js.org/)
-   * Container for JavaScript apps that helps it run consistently in different environments (client, server, native)
-* [Immutable](https://facebook.github.io/immutable-js/)
-   * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record
-* [Webpack](https://webpack.js.org/)
-   * Packages modules into static assets
-* [Babel](https://babeljs.io/)
-   * JavaScript compiler to allow for prettier JavaScript code
 
 ## Reference
 * https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
