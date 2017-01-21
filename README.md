@@ -8,9 +8,9 @@ Boilerplate: https://github.com/sindresorhus/electron-boilerplate
 ```
 npm install
 ```
-3. Run the program using the following line from the boilerplate's README.md.
+3. Run the program by running the Electron command.
 ```
-npm run dev
+electron .
 ```
 ## Technologies Used
 ### Electron
