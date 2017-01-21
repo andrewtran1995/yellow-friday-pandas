@@ -1,5 +1,3 @@
-// import p5 from 'p5';
-
 var song;
 
 const fileInputElement = document.getElementById("fileInput");
