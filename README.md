@@ -1,4 +1,14 @@
 # Yellow Friday Pandas
+## Getting Started
+1. Open WebStorm, and ```git clone``` this project.
+2. In the root directory of this project, run the node package manager to install any dependencies listed in the ```package.json```.
+```
+npm install
+```
+3. Run the program using the following line from the boilerplate's README.md.
+```
+npm run dev
+```
 ## Technologies Used
 * Electron
 * React.js
@@ -85,13 +95,13 @@
 
 ###Libraries
 * [Redux](http://redux.js.org/)
-   * Container for JavaScript apps that helps it run consistently in different environments (client, server, native).
+   * Container for JavaScript apps that helps it run consistently in different environments (client, server, native)
 * [Immutable](https://facebook.github.io/immutable-js/)
-   * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record.
+   * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record
 * [Webpack](https://webpack.js.org/)
    * Packages modules into static assets
 * [Babel](https://babeljs.io/)
-   * Makes your JavaScript pretty
+   * JavaScript compiler to allow for prettier JavaScript code
 
 ## Reference
 * https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
