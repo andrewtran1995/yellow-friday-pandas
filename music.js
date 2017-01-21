@@ -1,7 +1,9 @@
 var song;
 
 function setup() {
-	song = loadSound('03. 미쳤나봐.mp3');
+	song = createAudio('03. 미쳤나봐.mp3');
+	song.play();
+	song.showControls();
 	createCanvas(720, 200);
 	background(255,0,0);
 }
@@ -26,3 +28,5 @@ function pausePressed() {
 		background(255, 255, 0);
 	}
 }
+
+showControls();
