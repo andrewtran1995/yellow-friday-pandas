@@ -1,7 +1,15 @@
 var song;
 
-function setup() {
-	song = loadSound('assets\\Over the Horizon.mp3');
+const fileInputElement = document.getElementById("fileInput");
+console.log("fileInputElement is " + fileInputElement);
+
+fileInputElement.addEventListener('change', function(){
+	// Return .files[0].path to give access to the absolute file path
+	setup(fileInputElement.files[0].path);
+})
+
+function setup(audioFilePath) {
+	song = loadSound(audioFilePath);
 	createCanvas(720, 200);
 	background(255,0,0);
 }
@@ -21,7 +29,7 @@ function stopPressed() {
 }
 
 function pausePressed() {
-	if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+	if (song.isPlaying() ) { // .isPlaying() returns a boolean
 		song.pause();
 		background(255, 255, 0);
 	}
