@@ -22,14 +22,14 @@ function playPressed() {
 }
 
 function stopPressed() {
-	if (song.isPlaying()) { // .isPlaying() returns a boolean
+	if (song.isPlaying() || song.isPaused()) { // .isPlaying() returns a boolean
 		song.stop();
 		background(255, 0, 0);
 	}
 }
 
 function pausePressed() {
-	if (song.isPlaying() ) { // .isPlaying() returns a boolean
+	if (song.isPlaying()) { // .isPlaying() returns a boolean
 		song.pause();
 		background(255, 255, 0);
 	}
