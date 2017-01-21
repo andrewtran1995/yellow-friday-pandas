@@ -1,6 +1,8 @@
+// import p5 from 'p5';
+
 var song;
 
-var fileInputElement = document.getElementById("fileInput");
+const fileInputElement = document.getElementById("fileInput");
 console.log("fileInputElement is " + fileInputElement);
 
 fileInputElement.addEventListener('change', function(){
@@ -29,7 +31,7 @@ function stopPressed() {
 }
 
 function pausePressed() {
-	if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+	if (song.isPlaying() ) { // .isPlaying() returns a boolean
 		song.pause();
 		background(255, 255, 0);
 	}
