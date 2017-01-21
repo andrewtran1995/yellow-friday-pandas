@@ -28,5 +28,3 @@ function pausePressed() {
 		background(255, 255, 0);
 	}
 }
-
-showControls();
