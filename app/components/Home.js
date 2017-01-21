@@ -11,6 +11,7 @@ export default class Home extends Component {
         <div className={styles.container}>
           <h2>金曜日の黄パンダ</h2>
           <Link to="/counter">to Counter</Link>
+          <br/>
           <Link to="/player">to Player</Link>
         </div>
       </div>
