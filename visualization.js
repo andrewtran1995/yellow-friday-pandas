@@ -1,19 +1,16 @@
-class AbstractVisualization {
-	onRender() {
-		console.log("Abstract class called!");
-	}
-	onPlay() {
-		console.log("Abstract class called!");
-	}
-	onPause() {
-		console.log("Abstract class called!");
-	}
-	onStop() {
-		console.log("Abstract class called!");
-	}
+// Create mixin as common interface for visualizations
+var visualizationMixin = Base => class extends Base {
+	onRender() { }
+	onPlay() { }
+	onPause() { }
+	onStop() { }
 }
 
-class CanvasVisualization extends AbstractVisualization {
+class CanvasVisualization extends visualizationMixin(Base) {
+	constructor(song) {
+		this.song = song;
+	}
+
 	onRender() {
 		createCanvas(720, 200);
 		background(255,0,0);
