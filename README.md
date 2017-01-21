@@ -10,19 +10,15 @@ npm install
 npm run dev
 ```
 ## Technologies Used
-* Electron
-* React.js
-* d3.js
-
-## Electron
-### Setup
+### Electron
+#### Setup
 * npm: https://www.npmjs.com/
 * npm install -g electron --save-dev
 (possible improvements)
     * menubar: https://github.com/maxogden/menubar
     * awesome electron: https://github.com/sindresorhus/awesome-electron
 
-### Quick Start
+#### Quick Start
 * Main Process
     * package.json's main --> the main process
     * script that runs in main proccess can display GUI via web pages
@@ -44,7 +40,7 @@ npm run dev
         * `ipcRenderer` and `ipcMain` (inter-process communication) modules for sending messages
         * remote module for RPC (?) style communication
 
-### Write your First Electron App
+#### Write your First Electron App
 * Structure
     your-app/
     ├── package.json
@@ -58,42 +54,47 @@ npm run dev
 * keep a global reference of window obj, otherwise window will be closed when js garbage collected
 
 
-##Electron-React-Boilerplate
-* [github](https://github.com/chentsulin/electron-react-boilerplate)
+#### Electron-React-Boilerplate
+* [GitHub Repo of Boilerplate](https://github.com/chentsulin/electron-react-boilerplate)
 
-##React.js
+###React
 * React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
 
-###Dependencies
+####Dependencies
 * [NPM/Node](https://nodejs.org/en/download/)
-* 
-###Concepts
-####Components
-* [Intro to React.Component](https://facebook.github.io/react/docs/react-component.html)
 
-* Components are independent, reusable pieces in the DOM (Document Object Model)
-* Mounting
-   * Methods that are called when component is created and inserted into DOM:
-      * constructor()
-      * componentWillMount()
-      * render()
-      * componentDidMount()
-* Updating
-   * Methods called when component is re-rendered:
-      * componentWillRecieveProps()
-      * shouldComponentUpdate()
-      * componentWillUpdate()
-      * render()
-      * componentDidUpdate()
-* Unmounting
-   * Method called when component is removed from DOM:
-      * componentWillUnmount()
+####Components
+* [Components](https://facebook.github.io/react/docs/react-component.html)
+	* Components are independent, reusable pieces in the DOM (Document Object Model)
+	* Mounting
+	   * Methods that are called when component is created and inserted into DOM:
+		  * constructor()
+		  * componentWillMount()
+		  * render()
+		  * componentDidMount()
+	* Updating
+	   * Methods called when component is re-rendered:
+		  * componentWillRecieveProps()
+		  * shouldComponentUpdate()
+		  * componentWillUpdate()
+		  * render()
+		  * componentDidUpdate()
+	* Unmounting
+	   * Method called when component is removed from DOM:
+		  * componentWillUnmount()
+* [Containers](https://medium.com/@learnreact/container-components-c0e67432e005#.gqel9v3ha)
+    * Responsible for fetching data and rendering a corresponding sub-component
 
 * **Props** (properties) are parameters given to a component.
 
 * **Render** returns a *react element* using JSX (thing that translates code to be readable).
 
-###Libraries
+####Redux
+* [**Reducer**](http://redux.js.org/docs/basics/Reducers.html)
+   * Given a (previous) state and action, returns the next state
+   * Should be "pure" -- "Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation."
+
+####Libraries
 * [Redux](http://redux.js.org/)
    * Container for JavaScript apps that helps it run consistently in different environments (client, server, native)
 * [Immutable](https://facebook.github.io/immutable-js/)
