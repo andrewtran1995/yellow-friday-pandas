@@ -4,6 +4,9 @@ body {
 	margin: 0;
 }
 
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
 
 header {
 	position: absolute;
