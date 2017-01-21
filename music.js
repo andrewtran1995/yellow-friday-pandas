@@ -1,7 +1,7 @@
 var song;
 
 function setup() {
-	song = loadSound('03. 미쳤나봐.mp3');
+	song = loadSound('assets\\Over the Horizon.mp3');
 	createCanvas(720, 200);
 	background(255,0,0);
 }
