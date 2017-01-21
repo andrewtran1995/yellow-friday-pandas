@@ -19,9 +19,21 @@
 
 * Components are independent, reusable pieces in the DOM (Document Object Model)
 * Mounting
-   * 
+   * Methods that are called when component is created and inserted into DOM:
+      * constructor()
+      * componentWillMount()
+      * render()
+      * componentDidMount()
 * Updating
+   * Methods called when component is re-rendered:
+      * componentWillRecieveProps()
+      * shouldComponentUpdate()
+      * componentWillUpdate()
+      * render()
+      * componentDidUpdate()
 * Unmounting
+   * Method called when component is removed from DOM:
+      * componentWillUnmount()
 
 * **Props** (properties) are parameters given to a component.
 
@@ -34,7 +46,7 @@
    * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record.
 * [Webpack](https://webpack.js.org/)
    * Packages modules into static assets
-* [Babel] (https://babeljs.io/)
+* [Babel](https://babeljs.io/)
    * Makes your JavaScript pretty
 
 ## Reference
