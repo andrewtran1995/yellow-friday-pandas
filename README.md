@@ -13,7 +13,6 @@
 ###Dependencies
 * [NPM/Node](https://nodejs.org/en/download/)
 * 
-
 ###Concepts
 ####Components
 * [Intro to React.Component](https://facebook.github.io/react/docs/react-component.html)
@@ -34,9 +33,9 @@
 * [Immutable](https://facebook.github.io/immutable-js/)
    * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record.
 * [Webpack](https://webpack.js.org/)
-   * 
+   * Packages modules into static assets
 * [Babel] (https://babeljs.io/)
-   *
+   * Makes your JavaScript pretty
 
 ## Reference
 * https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
@@ -44,3 +43,6 @@
 * https://github.com/karan
    * Search for "brain" or "sound" or something
 * http://sonic-pi.net/
+* Boilerplate
+   * https://github.com/mxstbr/react-boilerplate/issues/889
+   * http://stackoverflow.com/questions/5377960/whats-the-best-practice-to-git-clone-into-an-existing-folder
