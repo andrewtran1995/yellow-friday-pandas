@@ -5,16 +5,18 @@
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="uikit/dist/css/uikit.css">
-
 	</head>
 	<body bgcolor="blue">
 		<img src="assets\Yellow Panda.png">
 		<div class="container">
 			<header>
-				<h1>Electron boilerplate</h1>
-				<button class="uk-button uk-button-primary">
-					<input class="uk-button uk-button-danger" type="file" id="ctrl" webkitdirectory directory multiple/>
-				</button>
+				<div>
+					<h1>Yellow Friday Pandas</h1>
+					<input id="fileInput" type="file" style="display:none;" />
+					<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
+						Select File
+					</button>
+				</div>
 			</header>
 			<section class="main"></section>
 			<footer></footer>
