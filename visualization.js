@@ -5,11 +5,12 @@
 // 	onPause() { }
 // 	onStop() { }
 // }
+var fft = new p5.FFT();
 
 class CanvasVisualization {
 	constructor(song) {
 		this.song = song;
-		this.fft = new p5.FFT();
+		fft.setInput(song);
 	}
 
 	onRender() {
@@ -18,8 +19,6 @@ class CanvasVisualization {
 	}
 	onPlay() {
 		background(0, 255, 0);
-		while(1)
-			this.draw();
 	}
 
 	onPause() {
@@ -34,7 +33,7 @@ class CanvasVisualization {
 		background(0);
 		noStroke();
 		fill(0,255,0); // spectrum is green
-		var spectrum = this.fft.analyze();
+		var spectrum = fft.analyze();
 		for (var i = 0; i< spectrum.length; i++){
 			var x = map(i, 0, spectrum.length, 0, width);
 			var h = -height + map(spectrum[i], 0, 255, height, 0);
