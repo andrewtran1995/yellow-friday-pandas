@@ -1,4 +1,5 @@
 var song;
+var visualization;
 
 const fileInputElement = document.getElementById("fileInput");
 console.log("fileInputElement is " + fileInputElement);
@@ -10,27 +11,27 @@ fileInputElement.addEventListener('change', function(){
 
 function setup(audioFilePath) {
 	song = loadSound(audioFilePath);
-	createCanvas(720, 200);
-	background(255,0,0);
+	visualization = CanvasVisualization(song);
+	visualization.onRender();
 }
 
-function playPressed() {
-	if (!song.isPlaying()) { // .isPlaying() returns a boolean
+document.getElementById('playBtn').addEventListener('click', function() {
+	if (!song.isPlaying()) {
 		song.play();
-		background(0, 255, 0);
+		visualization.onPlay();
 	}
-}
+});
 
-function stopPressed() {
-	if (song.isPlaying() || song.isPaused()) { // .isPlaying() returns a boolean
+document.getElementById('stopBtn').addEventListener('click', function() {
+	if (song.isPlaying() || song.isPaused()) {
 		song.stop();
-		background(255, 0, 0);
+		visualization.onStop();
 	}
-}
+});
 
-function pausePressed() {
-	if (song.isPlaying()) { // .isPlaying() returns a boolean
+document.getElementById('pauseBtn').addEventListener('click', function() {
+	if (song.isPlaying()) {
 		song.pause();
-		background(255, 255, 0);
+		visualization.onPause();
 	}
-}
+});
