@@ -34,7 +34,7 @@
    * Library that lets you create data that can't be changed. Useful for things like: List, Stack, Map, OrderedMap, Set, OrderedSet, and Record.
 * [Webpack](https://webpack.js.org/)
    * Packages modules into static assets
-* [Babel] (https://babeljs.io/)
+* [Babel](https://babeljs.io/)
    * Makes your JavaScript pretty
 
 ## Reference
