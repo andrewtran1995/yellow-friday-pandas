@@ -79,16 +79,15 @@ PopVisualization = {
 		noStroke();
 	},
 	draw: function(fft) {
-		background(173,216,230);
 		fill(255); // spectrum is green
-		var pointillize = map(mouseX, 0, 4, 40)
+		var pointillize = map(mouseX, 0, width, 4, 40);
 		var letters = '0123456789ABCDEF'.split('');
 		var hexColor = '#';
 		for (var i = 0; i < 6; i++ ) {
 			hexColor += letters[Math.round(Math.random() * 15)];
 		}
-		var x = floor(random(720));
-		var y = floor(random(400));
+		var x = floor(width);
+		var y = floor(height);
 		var spectrum = fft.analyze();
 
 		console.log(color(hexColor))
