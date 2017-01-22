@@ -86,13 +86,14 @@ PopVisualization = {
 		for (var i = 0; i < 6; i++ ) {
 			hexColor += letters[Math.round(Math.random() * 15)];
 		}
-		var x = floor(width);
-		var y = floor(height);
+		var x = floor(random(width));
+		var y = floor(random(height));
 		var spectrum = fft.analyze();
 
 		console.log(color(hexColor))
 		fill(color(hexColor));
-		ellipse(x, y, pointillize, pointillize);
+		pointillize_arg = spectrum.reduce(function(a,b) {return a+b}, 0)%40;
+		ellipse(x, y, pointillize_arg, pointillize_arg);
 		// for (var i = 0; i< spectrum.length; i++){
 		// 	var x = map(i, 0, spectrum.length, 0, width);
 		// 	var h = -height + map(spectrum[i], 0, 255, height, 0);
