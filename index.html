@@ -19,9 +19,12 @@
 	<div class="name-plate">
 		<h1>金曜日の黄パンダ</h1>
 		<input id="fileInput" type="file" style="display:none;" />
-		<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
+		<button class="uk-button uk-button-primary uk-width-1-1" onclick="document.getElementById('fileInput').click();">
 			> Select File <
 		</button>
+		<marquee behavior="scroll" direction="left">
+			<h3><b><div id="filename"></div></b></h3>
+		</marquee>
 		<!--<input id="multipleFileInput" type="file"  style="display:none;" webkitdirectory directory multiple/>-->
 		<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
 		<!--&gt; Select Folder <-->
@@ -78,6 +81,13 @@
 						crossorigin="anonymous"></script>
 				<script language="javascript" type="text/javascript" src="music.js"></script>
 				<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
+								<script language="JavaScript">
+					$("#fileInput").change(function(e) {
+						var file = e.currentTarget.files[0];
+						$("#filename").text(file.name);
+					})
+
+				</script>
 			</div>
 		</div>
 		<footer></footer>
