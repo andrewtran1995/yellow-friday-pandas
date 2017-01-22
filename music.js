@@ -7,13 +7,13 @@ console.log("fileInputElement is " + fileInputElement);
 
 fileInputElement.addEventListener('change', function(){
 	// Return .files[0].path to give access to the absolute file path
-	$('#playBtn').disabled = true;
+	document.getElementById('playBtn').disabled = true;
 	setup(fileInputElement.files[0].path);
 });
 
 function setup(audioFilePath) {
 	song = loadSound(audioFilePath, function() {
-		$('#playBtn').disabled = false;
+		document.getElementById('playBtn').disabled = false;
 	}, function() {
 		alert("Could not load file!");
 	});
