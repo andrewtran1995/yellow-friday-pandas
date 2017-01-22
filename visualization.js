@@ -19,13 +19,13 @@ BarVisualization = {
 	},
 	draw: function(fft) {
 		background(173,216,230);
-		noStroke();
+		stroke(255);
 		fill(0); // spectrum is green
 		var spectrum = fft.analyze();
 		for (var i = 0; i< spectrum.length; i++){
 			var x = map(i, 0, spectrum.length, 0, width);
 			var h = -height + map(spectrum[i], 0, 255, height, 0);
-			rect(x, height, width * 1.5 / spectrum.length, h )
+			rect(x, height, width * 2 / spectrum.length, h )
 		}
 	}
 }

@@ -12,7 +12,7 @@ fileInputElement.addEventListener('change', function(){
 
 function setup(audioFilePath) {
 	// TODO: Hard-coded to BAR_VIS right now
-	visualization = ENVELOPE_VIS;
+	visualization = BAR_VIS;
 	song = loadSound(audioFilePath);
 	VISUALIZATIONS.get(visualization).onRender();
 	fft = new p5.FFT();
