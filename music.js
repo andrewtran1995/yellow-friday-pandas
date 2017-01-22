@@ -14,6 +14,7 @@ function setup(audioFilePath) {
 	song = loadSound(audioFilePath);
 	VISUALIZATIONS.get(visualization).onRender();
 	fft = new p5.FFT();
+	fft.setInput(song);
 }
 
 function draw() {
