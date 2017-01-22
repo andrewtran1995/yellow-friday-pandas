@@ -12,12 +12,12 @@ fileInputElement.addEventListener('change', function(){
 function setup(audioFilePath) {
 	song = loadSound(audioFilePath);
 	createCanvas(720, 200);
-	background(255,0,0);
+	background(173, 216, 230);
 	this.fft = new p5.FFT();
 }
 
 function draw() {
-	background(0, 255, 0);
+	background(173, 216, 230);
 	noStroke();
 	fill(0); // spectrum is green
 	var spectrum = this.fft.analyze();
