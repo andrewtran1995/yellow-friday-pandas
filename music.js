@@ -1,6 +1,6 @@
 var song;
 var fft;
-var visualization;
+var visualization = BAR_VIS;
 
 const fileInputElement = document.getElementById("fileInput");
 console.log("fileInputElement is " + fileInputElement);
@@ -11,16 +11,26 @@ fileInputElement.addEventListener('change', function(){
 });
 
 function setup(audioFilePath) {
-	// TODO: Hard-coded to BAR_VIS right now
-	visualization = ENVELOPE_VIS;
 	song = loadSound(audioFilePath);
 	VISUALIZATIONS.get(visualization).onRender();
 	fft = new p5.FFT();
+	fft.setInput(song);
 }
 
 function draw() {
 	VISUALIZATIONS.get(visualization).draw(fft);
 }
+
+function switchVis(newVis) {
+	visualization = newVis;
+	VISUALIZATIONS.get(visualization).onRender();
+}
+
+$(".visBtn").click(function() {
+	switchVis($(this).data('vistype'));
+});
+
+/* Set event listeners for Play, Stop, and Pause */
 
 document.getElementById('playBtn').addEventListener('click', function() {
 	if (!song.isPlaying()) {
@@ -28,11 +38,6 @@ document.getElementById('playBtn').addEventListener('click', function() {
 		VISUALIZATIONS.get(visualization).onPlay();
 	}
 });
-/*"Vicky was here"
-Sebastian was also here
-Monica was also here
-Cody was also here
--sebastian*/
 
 document.getElementById('stopBtn').addEventListener('click', function() {
 	if (song.isPlaying() || song.isPaused()) {
@@ -47,3 +52,9 @@ document.getElementById('pauseBtn').addEventListener('click', function() {
 		VISUALIZATIONS.get(visualization).onPause();
 	}
 });
+
+/*"Vicky was here"
+ Sebastian was also here
+ Monica was also here
+ Cody was also here
+ -sebastian*/
