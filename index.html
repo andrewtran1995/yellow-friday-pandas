@@ -68,14 +68,17 @@
 							}</script>
 							<button onclick="myFunction()" class="dropbtn">Change Visual</button>
 							<div id="myDropdown" class="dropdown-content">
-								<a href="#" class="visBtn" data="visType:BAR_VIS">Bars</a>
-								<a href="#" class="visBtn" data="visType:ENVELOPE_VIS">Envelopes</a>
-								<a href="#" class="visBtn" disabled>Link 3</a>
+								<a class="visBtn" data-vistype="BAR_VIS">Bars</a>
+								<a class="visBtn" data-vistype="ENVELOPE_VIS">Envelopes</a>
 							</div>
 						</th>
 					</tr>
 				</table>
 				<div style="width:800px; margin:0 auto;">
+					<script
+							src="https://code.jquery.com/jquery-3.1.1.min.js"
+							integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+							crossorigin="anonymous"></script>
 					<script language="JavaScript" type="text/javascript" src="visualization.js"></script>
 					<script language="javascript" type="text/javascript" src="music.js"></script>
 					<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>

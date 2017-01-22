@@ -26,7 +26,7 @@ function switchVis(newVis) {
 }
 
 $(".visBtn").click(function() {
-	switchVis(this.data('visType'));
+	switchVis($(this).data('vistype'));
 });
 
 /* Set event listeners for Play, Stop, and Pause */
