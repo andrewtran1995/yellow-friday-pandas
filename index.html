@@ -16,7 +16,7 @@
 
 
 
-	<div class="dropdown uk-position-bottom-right uk-padding-large" >
+	<div class="dropdown">
 		<script>function myFunction() {
 			document.getElementById("myDropdown").classList.toggle("show");
 		}
@@ -48,12 +48,12 @@
 
 
 		<div class="uk-container">
-			<img  class= "uk-padding-large" src="assets\left.png"  >
+			<img  src="assets\left.png" >
 		</div>
 		<div class="container">
 			<header>
 				<div>
-					<h1 style="color:white;" >Yellow Friday Pandas</h1>
+					<h1>Yellow Friday Pandas</h1>
 					<input id="fileInput" type="file" style="display:none;" />
 					<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
 						> Select File <
@@ -62,19 +62,22 @@
 			</header>
 			<section class="main"></section>
 			<div class="uk-section">
-				<div class="btnGroup">
-					<div class="musicBtn">
-						<button id="playBtn" class="uk-button uk-button-secondary" onclick="playPressed()">Play</button>
-					</div>
-					<div class="musicBtn">
-						<button id="stopBtn" class="uk-button uk-button-secondary" onclick="stopPressed()">Stop</button>
-					</div>
-					<div class="musicBtn">
-						<button id="pauseBtn" class="uk-button uk-button-secondary" onclick="pausePressed()">Pause</button>
-					</div>
-				</div>
-				<footer></footer>
+			<div class="btnGroup" style="width:50%; margin:0 auto;">
+				<table>
+					<tr>
+						<th class="musicBtn">
+							<button id="playBtn" class="uk-button uk-button-secondary" onclick="playPressed()">Play</button>
+						</th>
+						<th class="musicBtn">
+							<button id="stopBtn" class="uk-button uk-button-secondary" onclick="stopPressed()">Stop</button>
+						</th>
+						<th class="musicBtn">
+							<button id="pauseBtn" class="uk-button uk-button-secondary" onclick="pausePressed()">Pause</button>
+						</th>
+					</tr>
+				</table>
 			</div>
+			<footer></footer>
 		</div>
 
 	</body>
