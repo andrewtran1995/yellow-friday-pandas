@@ -1,151 +1,91 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>金曜日の黄🐼</title>
-		<link rel="stylesheet" href="index.css">
-		<link rel="stylesheet" href="uikit/dist/css/uikit.css">
-		<script
-				src="https://code.jquery.com/jquery-3.1.1.min.js"
-				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-				crossorigin="anonymous"></script>
-		<script language="javascript" type="text/javascript" src="p5/p5.js"></script>
-		<script language="javascript" type="text/javascript" src="p5/p5.dom.js"></script>
-		<script language="javascript" type="text/javascript" src="p5/p5.sound.js"></script>
-	</head>
-	<body bgcolor="lightblue">
-		<div class="uk-container">
-			<img  src="assets\left.png" >
-			<div class="name-plate">
-				<h1>Yellow Friday Pandas</h1>
-				<input id="fileInput" type="file" style="display:none;" />
-				<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
-					> Select File <
-				</button>
-<<<<<<< .merge_file_a09412
-<<<<<<< .merge_file_a02560
-<<<<<<< .merge_file_a09696
-				<!--<input id="multipleFileInput" type="file"  style="display:none;" webkitdirectory directory multiple/>-->
-				<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
-					<!--&gt; Select Folder <-->
-				<!--</button>-->
-			</div>
-		</div>
-		<div class="uk-container">
-			<header></header>
-=======
-				<marquee behavior="scroll" direction="left">
-					<h3><b><div id="filename"></div></b></h3>
-				</marquee>
-			</div>
-		</div>
-		<div class="uk-container">
-
->>>>>>> .merge_file_a02252
-=======
-				<marquee behavior="scroll" direction="left">
-					<h3><b><div id="filename"></div></b></h3>
-				</marquee>
-			</div>
-		</div>
-		<div class="uk-container">
-
->>>>>>> .merge_file_a11384
-=======
-				<marquee behavior="scroll" direction="left">
-					<h3><b><div id="filename"></div></b></h3>
-				</marquee>
-			</div>
-		</div>
-		<div class="uk-container">
-
->>>>>>> .merge_file_a12360
-			<section class="main"></section>
-			<div class="uk-section bottom">
-			<div class="btnGroup" style="width:50%; margin:0 auto;">
-				<table>
-					<tr>
-						<th class="musicBtn">
-							<button id="playBtn" class="uk-button uk-button-secondary">Play</button>
-						</th>
-						<th class="musicBtn">
-							<button id="stopBtn" class="uk-button uk-button-secondary">Stop</button>
-						</th>
-						<th class="musicBtn">
-							<button id="pauseBtn" class="uk-button uk-button-secondary">Pause</button>
-						</th>
-						<th class="dropdown">
-							<script>function myFunction() {
-								document.getElementById("myDropdown").classList.toggle("show");
-							}
-
-							// Close the dropdown menu if the user clicks outside of it
-							window.onclick = function(event) {
-								if (!event.target.matches('.dropbtn')) {
-									var dropdowns = document.getElementsByClassName("dropdown-content");
-									var i;
-									for (i = 0; i < dropdowns.length; i++) {
-										var openDropdown = dropdowns[i];
-										if (openDropdown.classList.contains('show')) {
-											openDropdown.classList.remove('show');
-										}
+<head>
+	<meta charset="utf-8">
+	<title>金曜日の黄🐼</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="uikit/dist/css/uikit.css">
+	<script
+			src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"></script>
+	<script language="javascript" type="text/javascript" src="p5/p5.js"></script>
+	<script language="javascript" type="text/javascript" src="p5/p5.dom.js"></script>
+	<script language="javascript" type="text/javascript" src="p5/p5.sound.js"></script>
+</head>
+<body bgcolor="lightblue">
+<div class="uk-container">
+	<img  src="assets\left.png" >
+	<div class="name-plate">
+		<h1>金曜日の黄パンダ</h1>
+		<input id="fileInput" type="file" style="display:none;" />
+		<button class="uk-button uk-button-primary uk-width-1-1" onclick="document.getElementById('fileInput').click();">
+			> Select File <
+		</button>
+		<marquee behavior="scroll" direction="left">
+			<h3><b><div id="filename"></div></b></h3>
+		</marquee>
+		<!--<input id="multipleFileInput" type="file"  style="display:none;" webkitdirectory directory multiple/>-->
+		<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
+		<!--&gt; Select Folder <-->
+		<!--</button>-->
+	</div>
+</div>
+<div class="uk-container">
+	<header></header>
+	<section class="main"></section>
+	<div class="uk-section bottom">
+		<div class="btnGroup" style="width:50%; margin:0 auto;">
+			<table>
+				<tr>
+					<th class="musicBtn">
+						<button id="playBtn" class="uk-button uk-button-secondary">Play</button>
+					</th>
+					<th class="musicBtn">
+						<button id="stopBtn" class="uk-button uk-button-secondary">Stop</button>
+					</th>
+					<th class="musicBtn">
+						<button id="pauseBtn" class="uk-button uk-button-secondary">Pause</button>
+					</th>
+					<th class="dropdown">
+						<script>function myFunction() {
+							document.getElementById("myDropdown").classList.toggle("show");
+						}
+						// Close the dropdown menu if the user clicks outside of it
+						window.onclick = function(event) {
+							if (!event.target.matches('.dropbtn')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+									var openDropdown = dropdowns[i];
+									if (openDropdown.classList.contains('show')) {
+										openDropdown.classList.remove('show');
 									}
 								}
-							}</script>
-							<button onclick="myFunction()" class="dropbtn">Change Visual</button>
-							<div id="myDropdown" class="dropdown-content">
-								<a class="visBtn" data-vistype="BAR_VIS">Bars</a>
-								<a class="visBtn" data-vistype="ENVELOPE_VIS">Envelopes</a>
-							</div>
-						</th>
-					</tr>
-				</table>
-<<<<<<< .merge_file_a09412
-<<<<<<< .merge_file_a02560
-<<<<<<< .merge_file_a09696
-				<div style="width:800px; margin:0 auto;">
-					<script
-							src="https://code.jquery.com/jquery-3.1.1.min.js"
-							integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-							crossorigin="anonymous"></script>
-					<script language="JavaScript" type="text/javascript" src="visualization.js"></script>
-					<script language="javascript" type="text/javascript" src="music.js"></script>
-					<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
-				</div>
-=======
->>>>>>> .merge_file_a02252
-=======
->>>>>>> .merge_file_a11384
-=======
->>>>>>> .merge_file_a12360
-			</div>
-			<footer></footer>
-		</div>
-
-	</body>
-	<div style="width:800px; margin:0 auto;">
-	<script language="JavaScript" type="text/javascript" src="visualization.js"></script>
-	<script language="javascript" type="text/javascript" src="music.js"></script>
-	<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
-
-		<script
-				src="https://code.jquery.com/jquery-3.1.1.min.js"
-				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-				crossorigin="anonymous"></script>
-		<script language="JavaScript">
-			$("#fileInput").change(function(e) {
-				var file = e.currentTarget.files[0];
-				$("#filename").text(file.name);
-			})
-
-		</script>
-		<script language="JavaScript">
-		$("#fileInput").change(function(e) {
-		    var file = e.currentTarget.files[0];
-		    $("#filename").text(file.name);
-		})
-
-		</script>
-	</div>
+							}
+						}</script>
+						<button onclick="myFunction()" class="dropbtn">Change Visual</button>
+						<div id="myDropdown" class="dropdown-content">
+							<a class="visBtn" data-vistype="BAR_VIS">Bars</a>
+							<a class="visBtn" data-vistype="ENVELOPE_VIS">Envelopes</a>
+							<a class="visBtn" data-vistype="POP_VIS">Pointillism</a>
+						</div>
+					</th>
+				</tr>
+			</table>
+			<div style="width:800px; margin:0 auto;">
+				<script language="JavaScript" type="text/javascript" src="visualization.js"></script>
+				<script
+						src="https://code.jquery.com/jquery-3.1.1.min.js"
+						integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+						crossorigin="anonymous"></script>
+				<script language="javascript" type="text/javascript" src="music.js"></script>
+				<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
+				<script language="JavaScript">
+					$("#fileInput").change(function(e) {
+						var file = e.currentTarget.files[0];
+						$("#filename").text(file.name);
+					})
+				</script>
+</body>
 </html>
-

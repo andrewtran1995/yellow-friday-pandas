@@ -1,5 +1,6 @@
 const BAR_VIS = 'BAR_VIS';
 const ENVELOPE_VIS = 'ENVELOPE_VIS';
+const POP_VIS = 'POP_VIS';
 var VISUALIZATIONS = new Map();
 
 BarVisualization = {
@@ -61,5 +62,46 @@ EnvelopeVisualization = {
 	}
 }
 
+PopVisualization = {
+	onRender: function() {
+		createCanvas(720, 400);
+		background(173,216,230);
+	},
+	onPlay: function() {
+		background(173,216,230);
+		draw();
+	},
+	onPause: function() {
+		background(173,216,230);
+	},
+	onStop: function() {
+		background(173,216,230);
+		noStroke();
+	},
+	draw: function(fft) {
+		fill(255); // spectrum is green
+		var pointillize = map(mouseX, 0, width, 4, 40);
+		var letters = '0123456789ABCDEF'.split('');
+		var hexColor = '#';
+		for (var i = 0; i < 6; i++ ) {
+			hexColor += letters[Math.round(Math.random() * 15)];
+		}
+		var x = floor(random(width));
+		var y = floor(random(height));
+		var spectrum = fft.analyze();
+
+		console.log(color(hexColor))
+		fill(color(hexColor));
+		pointillize_arg = spectrum.reduce(function(a,b) {return a+b}, 0)%40;
+		ellipse(x, y, pointillize_arg, pointillize_arg);
+		// for (var i = 0; i< spectrum.length; i++){
+		// 	var x = map(i, 0, spectrum.length, 0, width);
+		// 	var h = -height + map(spectrum[i], 0, 255, height, 0);
+		// 	rect(x, height, width / spectrum.length, h )
+		// }
+	}
+}
+
 VISUALIZATIONS.set(BAR_VIS, BarVisualization);
 VISUALIZATIONS.set(ENVELOPE_VIS, EnvelopeVisualization);
+VISUALIZATIONS.set(POP_VIS, PopVisualization);
