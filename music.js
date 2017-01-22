@@ -35,6 +35,11 @@ document.getElementById('playBtn').addEventListener('click', function() {
 		draw();
 	}
 });
+/*"Vicky was here"
+Sebastian was also here
+Monica was also here
+Cody was also here
+-sebastian*/
 
 document.getElementById('stopBtn').addEventListener('click', function() {
 	background(255, 0, 0);
