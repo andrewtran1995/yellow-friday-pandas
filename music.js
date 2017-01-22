@@ -42,9 +42,9 @@ Cody was also here
 -sebastian*/
 
 document.getElementById('stopBtn').addEventListener('click', function() {
-	background(255, 0, 0);
 	if (song.isPlaying() || song.isPaused()) {
 		song.stop();
+		background(255, 0, 0);
 	}
 });
 
