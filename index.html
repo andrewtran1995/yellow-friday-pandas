@@ -2,44 +2,89 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
+		<title>Yellow Friday Panda</title>
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="uikit/dist/css/uikit.css">
+		<script
+				src="https://code.jquery.com/jquery-3.1.1.min.js"
+				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+				crossorigin="anonymous"></script>
 		<script language="javascript" type="text/javascript" src="p5/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="p5/p5.dom.js"></script>
 		<script language="javascript" type="text/javascript" src="p5/p5.sound.js"></script>
 	</head>
 	<body bgcolor="blue">
 		<div class="uk-container">
-			<img src="assets\Yellow Panda.png">
+			<img  src="assets\left.png" >
+			<div class="name-plate">
+				<h1>Yellow Friday Pandas</h1>
+				<input id="fileInput" type="file" style="display:none;" />
+				<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
+					> Select File <
+				</button>
+			</div>
 		</div>
-		<div class="container">
+		<div class="uk-container">
 			<header>
-				<div>
-					<h1>Yellow Friday Pandas</h1>
-					<input id="fileInput" type="file" style="display:none;" />
-					<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
-						> Select File <
-					</button>
-				</div>
+				<!--<div>-->
+					<!--<h1>Yellow Friday Pandas</h1>-->
+					<!--<input id="fileInput" type="file" style="display:none;" />-->
+					<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
+						<!--&gt; Select File <-->
+					<!--</button>-->
+				<!--</div>-->
 			</header>
 			<section class="main"></section>
-			<div class="btnGroup">
+			<div class="uk-section bottom">
+			<div class="btnGroup" style="width:50%; margin:0 auto;">
 				<table>
 					<tr>
 						<th class="musicBtn">
-							<button id="playBtn" class="uk-button uk-button-secondary" onclick="playPressed()">Play</button>
+							<button id="playBtn" class="uk-button uk-button-secondary">Play</button>
 						</th>
 						<th class="musicBtn">
-							<button id="stopBtn" class="uk-button uk-button-secondary" onclick="stopPressed()">Stop</button>
+							<button id="stopBtn" class="uk-button uk-button-secondary">Stop</button>
 						</th>
 						<th class="musicBtn">
-							<button id="pauseBtn" class="uk-button uk-button-secondary" onclick="pausePressed()">Pause</button>
+							<button id="pauseBtn" class="uk-button uk-button-secondary">Pause</button>
+						</th>
+						<th class="dropdown">
+							<script>function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+							// Close the dropdown menu if the user clicks outside of it
+							window.onclick = function(event) {
+								if (!event.target.matches('.dropbtn')) {
+
+									var dropdowns = document.getElementsByClassName("dropdown-content");
+									var i;
+									for (i = 0; i < dropdowns.length; i++) {
+										var openDropdown = dropdowns[i];
+										if (openDropdown.classList.contains('show')) {
+											openDropdown.classList.remove('show');
+										}
+									}
+								}
+							}</script>
+							<button onclick="myFunction()" class="dropbtn">Change Visual</button>
+							<div id="myDropdown" class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
 						</th>
 					</tr>
 				</table>
 			</div>
 			<footer></footer>
 		</div>
+
 	</body>
+	<div style="width:800px; margin:0 auto;">
+	<script language="JavaScript" type="text/javascript" src="visualization.js"></script>
 	<script language="javascript" type="text/javascript" src="music.js"></script>
+	<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
+	</div>
 </html>
+
