@@ -22,18 +22,13 @@
 				<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
 					> Select File <
 				</button>
+				<marquee behavior="scroll" direction="left">
+					<h3><b><div id="filename"></div></b></h3>
+				</marquee>
 			</div>
 		</div>
 		<div class="uk-container">
-			<header>
-				<!--<div>-->
-					<!--<h1>Yellow Friday Pandas</h1>-->
-					<!--<input id="fileInput" type="file" style="display:none;" />-->
-					<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
-						<!--&gt; Select File <-->
-					<!--</button>-->
-				<!--</div>-->
-			</header>
+
 			<section class="main"></section>
 			<div class="uk-section bottom">
 			<div class="btnGroup" style="width:50%; margin:0 auto;">
@@ -86,6 +81,17 @@
 	<script language="javascript" type="text/javascript" src="music.js"></script>
 	<script language="JavaScript" type="text/javascript" src="uikit/dist/js/uikit.js"></script>
 
+		<script
+				src="https://code.jquery.com/jquery-3.1.1.min.js"
+				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+				crossorigin="anonymous"></script>
+		<script language="JavaScript">
+			$("#fileInput").change(function(e) {
+				var file = e.currentTarget.files[0];
+				$("#filename").text(file.name);
+			})
+
+		</script>
 		<script language="JavaScript">
 		$("#fileInput").change(function(e) {
 		    var file = e.currentTarget.files[0];
