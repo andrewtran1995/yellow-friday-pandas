@@ -6,27 +6,26 @@
 // 	onStop() { }
 // }
 
-class CanvasVisualization {
-	constructor(song) {
-		this.song = song;
+// const BAR_VIS = 'BAR_VIS';
+// var VISUALIZATIONS = new Map
+// 	BAR_VIS => BarVisualization
+// }
 
-	}
+BarVisualization = {
 
-	onRender() {
+	onRender: function() {
 		createCanvas(720, 200);
 		background(255,0,0);
-	}
-	onPlay() {
+	},
+	onPlay: function() {
 		background(0, 255, 0);
 		while(1)
 			this.draw();
-	}
-
-	onPause() {
+	},
+	onPause: function() {
 		background(255, 255, 0);
-	}
-
-	onStop() {
+	},
+	onStop: function() {
 		background(255, 0, 0);
 	}
 }
