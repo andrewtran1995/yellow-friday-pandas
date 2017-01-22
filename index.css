@@ -20,7 +20,7 @@ img {
 .dropbtn {
 	background-color: crimson;
 	color: white;
-	padding: 16px;
+	padding: 10px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
@@ -73,23 +73,18 @@ header {
 	text-align: center;
 }
 
-
-header h1 {
-	font-size: 60px;
-	font-weight: 100;
+h1 {
+	font-size: 10vw !important;
 	margin: 0;
 	padding: 0;
 }
 
-.uk-section{
-	background-color: white;
-}
 
-.btngroup{
-	margin: auto;
-}
-
-table{
+table {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.uk-button{
+
 }

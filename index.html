@@ -13,55 +13,28 @@
 		<script language="javascript" type="text/javascript" src="p5/p5.sound.js"></script>
 	</head>
 	<body bgcolor="blue">
-
-
-
-	<div class="dropdown">
-		<script>function myFunction() {
-			document.getElementById("myDropdown").classList.toggle("show");
-		}
-
-		// Close the dropdown menu if the user clicks outside of it
-		window.onclick = function(event) {
-			if (!event.target.matches('.dropbtn')) {
-
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains('show')) {
-						openDropdown.classList.remove('show');
-					}
-				}
-			}
-		}</script>
-		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-		<div id="myDropdown" class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</div>
-	</div>
-
-
-
-
-
 		<div class="uk-container">
 			<img  src="assets\left.png" >
+			<div class="name-plate">
+				<h1>Yellow Friday Pandas</h1>
+				<input id="fileInput" type="file" style="display:none;" />
+				<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
+					> Select File <
+				</button>
+			</div>
 		</div>
-		<div class="container">
+		<div class="uk-container">
 			<header>
-				<div>
-					<h1>Yellow Friday Pandas</h1>
-					<input id="fileInput" type="file" style="display:none;" />
-					<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">
-						> Select File <
-					</button>
-				</div>
+				<!--<div>-->
+					<!--<h1>Yellow Friday Pandas</h1>-->
+					<!--<input id="fileInput" type="file" style="display:none;" />-->
+					<!--<button class="uk-button uk-button-primary" onclick="document.getElementById('fileInput').click();">-->
+						<!--&gt; Select File <-->
+					<!--</button>-->
+				<!--</div>-->
 			</header>
 			<section class="main"></section>
-			<div class="uk-section">
+			<div class="uk-section bottom">
 			<div class="btnGroup" style="width:50%; margin:0 auto;">
 				<table>
 					<tr>
@@ -73,6 +46,32 @@
 						</th>
 						<th class="musicBtn">
 							<button id="pauseBtn" class="uk-button uk-button-secondary" onclick="pausePressed()">Pause</button>
+						</th>
+						<th class="dropdown">
+							<script>function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+							// Close the dropdown menu if the user clicks outside of it
+							window.onclick = function(event) {
+								if (!event.target.matches('.dropbtn')) {
+
+									var dropdowns = document.getElementsByClassName("dropdown-content");
+									var i;
+									for (i = 0; i < dropdowns.length; i++) {
+										var openDropdown = dropdowns[i];
+										if (openDropdown.classList.contains('show')) {
+											openDropdown.classList.remove('show');
+										}
+									}
+								}
+							}</script>
+							<button onclick="myFunction()" class="dropbtn">Change Visual</button>
+							<div id="myDropdown" class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
 						</th>
 					</tr>
 				</table>
