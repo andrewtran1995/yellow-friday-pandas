@@ -9,23 +9,13 @@ body {
 }
 
 img {
+	height: 50%;
 	position: relative;
 	left: 0px;
 	float: left;
 	overflow: hidden;
 }
 
-.a1{
-	z-index: 2;
-}
-
-.a2{
-	z-index: 3;
-}
-
-.name-plate{
-	top: 50px;
-}
 
 /* Dropdown Button */
 .dropbtn {
@@ -85,12 +75,11 @@ header {
 }
 
 h1 {
-	color:black !important;
-	font-size: 8vw !important;
-	font-weight: 200;
-	top: -150px;
-	margin: auto;
+	font-size: 10vw !important;
+	margin: 0;
+	padding: 0;
 }
+
 
 table {
 	margin-left: auto;
@@ -98,15 +87,8 @@ table {
 }
 
 .uk-button-primary{
-	margin-left: 40% !important;
-	margin-right: 30% !important;
 }
 
 canvas{
 	width: 100% !important;
-	margin-top: -20%;
-}
-
-.btnGroup{
-	margin-top: -10%;
 }
